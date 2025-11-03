@@ -1,0 +1,29 @@
+<head>
+    <meta charset="UTF-8">
+    <title>Colaborador Tech</title>
+    <link rel="stylesheet" href="login.css">
+</head>
+
+<body>
+
+    <div class="login-container">
+        <h2>Colaborador Tech</h2>
+
+        <form>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="seuemail@email.com" [(ngModel)]="email" (click)="RemoverErro()"required>
+
+            <label for="senha">Senha:</label>
+            <input type="password" id="senha" name="senha" placeholder="Senha" [(ngModel)]="senha" (click)="RemoverErro()" required>
+
+            <app-erro [mensagem]="mensagemDeErro"></app-erro>
+            
+            <button type="submit" (click)="Entrar()">Entrar</button>
+        </form>
+
+        <a href="/recuperar-senha">Esqueci minha senha</a>
+    </div>
+
+</body>
+
+<app-loading> </app-loading>

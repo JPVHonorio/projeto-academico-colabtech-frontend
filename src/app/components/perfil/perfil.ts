@@ -7,5 +7,5 @@ import { Component } from '@angular/core';
   styleUrl: './perfil.css',
 })
 export class Perfil {
-
+  nome: String = "";
 }
