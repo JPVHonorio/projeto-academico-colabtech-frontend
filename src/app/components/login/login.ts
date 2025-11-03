@@ -6,9 +6,9 @@ import { HttpErrorResponse } from '@angular/common/http';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { Loading } from '../loading/loading';
-import { LoadingService } from '../../services/loading/loading';
+import { LoadingService } from '../../services/loading/loading-service';
 import { Erro } from '../erro/erro';
-import { ErroService } from '../../services/erro/erro';
+import { ErroService } from '../../services/erro/erro-service';
 import { AuthService } from '../../services/auth/auth-service';
 
 @Component({

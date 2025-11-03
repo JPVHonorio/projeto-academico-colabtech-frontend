@@ -7,96 +7,12 @@
 
     <!-- ABA PERFIL -->
     @if (abaPerfil){
-    <section id="perfil" class="tab-content {{abaPerfilStatus}}">
-      <h1>Bem vindo(a), {{usuarioLogado?.nome}}</h1>
-      <form class="profile-form">
-
-        <div class="photo-section">
-          <div class="photo-wrapper">
-            <img id="profile-photo" src="/profileImg.jpg" alt="Foto do perfil">
-            <label for="photo-upload" class="upload-icon" title="Alterar foto">📷</label>
-            <input type="file" id="photo-upload" accept="image/*">
-          </div>
-        </div>
-
-
-        <div class="form-grid">
-          <div class="form-group"><label>Nome</label><input type="text" name="nome"
-              placeholder="{{usuarioLogado?.nome}}" [(ngModel)]="nome"></div>
-          <div class="form-group"><label>Email</label><input type="email" name="email"
-              placeholder="{{usuarioLogado?.email}}" [(ngModel)]="email"></div>
-          <div class="form-group"><label>Telefone</label><input type="tel" name="telefone"
-              placeholder="{{usuarioLogado?.telefone}}" [(ngModel)]="telefone"></div>
-          <div class="form-group"><label>Senha</label><input type="password" name="senha" placeholder="********"
-              [(ngModel)]="senha"></div>
-          <div class="form-group"><label>Posição</label><input type="text" name="posicao"
-              placeholder="{{usuarioLogado?.posicao}}" [(ngModel)]="posicao">
-          </div>
-          <div class="form-group"><label>Rua</label><input type="text" name="rua" placeholder="{{usuarioLogado?.rua}}"
-              [(ngModel)]="rua"></div>
-          <div class="form-group"><label>Bairro</label><input type="text" name="bairro"
-              placeholder="{{usuarioLogado?.bairro}}" [(ngModel)]="bairro"></div>
-          <div class="form-group"><label>Número</label><input type="text" name="numero"
-              placeholder="{{usuarioLogado?.numero}}" [(ngModel)]="numero"></div>
-          <div class="form-group"><label>Cidade</label><input type="text" name="cidade"
-              placeholder="{{usuarioLogado?.cidade}}" [(ngModel)]="cidade"></div>
-          <div class="form-group"><label>Estado</label><input type="text" name="estado"
-              placeholder="{{usuarioLogado?.estado}}" [(ngModel)]="estado"></div>
-          <div class="form-group"><label>País</label><input type="text" name="pais"
-              placeholder="{{usuarioLogado?.pais}}" [(ngModel)]="pais"></div>
-          <div class="form-group"><label>CEP</label><input type="text" name="cep" placeholder="{{usuarioLogado?.cep}}"
-              [(ngModel)]="cep"></div>
-        </div>
-
-        <button type="submit" class="save-btn" (click)="Salvar()">Salvar Alterações</button>
-      </form>
-    </section>
+      <app-informacoes></app-informacoes>
     }
 
     <!-- ABA REQUISIÇÕES -->
     @if(abaRequisicoes){
-    <section id="requisicoes" class="tab-content {{abaRequisicoesStatus}}">
-      <h1>Requisições</h1>
-
-      <div class="req-header">
-        <input type="text" id="search" placeholder="🔍 Buscar requisições...">
-        <button class="new-req-btn">+ Nova Requisição</button>
-      </div>
-
-      <table class="req-table">
-        <thead>
-          <tr>
-            <th>Nome da Requisição</th>
-            <th>Tipo</th>
-            <th>Status</th>
-          </tr>
-        </thead>
-        <tbody id="req-body">
-          <tr>
-            <td>Instalação de Software</td>
-            <td>TI</td>
-            <td><span class="status aprovado">Aprovado</span></td>
-          </tr>
-          <tr>
-            <td>Reembolso de Viagem</td>
-            <td>Financeiro</td>
-            <td><span class="status pendente">Pendente</span></td>
-          </tr>
-          <tr>
-            <td>Troca de Equipamento</td>
-            <td>Manutenção</td>
-            <td><span class="status recusado">Recusado</span></td>
-          </tr>
-          <tr>
-            <td>Solicitação de Férias</td>
-            <td>RH</td>
-            <td><span class="status aprovado">Aprovado</span></td>
-          </tr>
-        </tbody>
-      </table>
-    </section>
+      <app-requisicoes></app-requisicoes>
     }
   </div>
 </body>
-
-<app-loading> </app-loading>

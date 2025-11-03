@@ -1,0 +1,29 @@
+<section id="requisicoes" class="tab-content">
+  <h1>Requisições</h1>
+
+  <div class="req-header">
+    <button class="new-req-btn" (click)="AtivarModal()">+ Nova Requisição</button>
+  </div>
+
+  <table class="req-table">
+    <thead>
+      <tr>
+        <th>Nome da Requisição</th>
+        <th>Setor</th>
+        <th>Status</th>
+      </tr>
+    </thead>
+    <tbody id="req-body">
+      @for (req of requisicoes(); track req.id) {
+      <tr>
+        <td>{{ req.nome }}</td>
+        <td>{{ req.setor }}</td>
+        <td><span class="status {{GerarStatus(req.status)}}">{{GerarStatus(req.status)}}</span></td>
+      </tr>
+      }
+    </tbody>
+  </table>
+</section>
+
+<!-- MODAL -->
+<app-nova-requisicao></app-nova-requisicao>

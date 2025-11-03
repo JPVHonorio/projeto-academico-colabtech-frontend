@@ -1,0 +1,95 @@
+.modal-overlay {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    top: 30%;
+    left: 35%;
+    background: white;
+    border-radius: 10%;
+    box-shadow: 10px 10px 5px rgba(136, 136, 136, 0.171);
+}
+
+.modal {
+  background: #fff;
+  border-radius: 10px;
+  padding: 30px 40px;
+  width: 100%;
+  max-width: 400px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+  animation: fadeIn 0.3s ease;
+}
+
+.modal h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.modal .form-group {
+  margin-bottom: 15px;
+}
+
+.modal input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 15px;
+}
+
+.modal-buttons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.cancel-btn, .send-btn {
+  border: none;
+  padding: 10px 18px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  font-size: 14px;
+}
+
+.cancel-btn {
+  background: #ccc;
+  color: #333;
+}
+
+.cancel-btn:hover {
+  background: #b1b1b1;
+}
+
+.send-btn {
+  background: #0078ff;
+  color: #fff;
+}
+
+.send-btn:hover {
+  background: #005fcc;
+}
+
+.modal select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 15px;
+  background-color: #fff;
+  appearance: none; /* Remove o estilo padrão do navegador */
+  background-image: url('data:image/svg+xml;utf8,<svg fill="gray" height="16" viewBox="0 0 24 24" width="16" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/></svg>');
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  background-size: 14px;
+}
+
+.modal select:focus {
+  border-color: #0078ff;
+  outline: none;
+}
+
+@keyframes fadeIn {
+  from {opacity: 0; transform: scale(0.95);}
+  to {opacity: 1; transform: scale(1);}
+}

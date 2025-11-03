@@ -1,5 +1,5 @@
 import { Component, inject, Input, SimpleChanges } from '@angular/core';
-import { LoadingService } from '../../services/loading/loading';
+import { LoadingService } from '../../services/loading/loading-service';
 
 @Component({
   selector: 'app-loading',

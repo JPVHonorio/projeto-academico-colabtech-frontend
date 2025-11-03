@@ -1,5 +1,5 @@
 import { Component, inject, Input } from '@angular/core';
-import { ErroService } from '../../services/erro/erro';
+import { ErroService } from '../../services/erro/erro-service';
 
 @Component({
   selector: 'app-erro',
