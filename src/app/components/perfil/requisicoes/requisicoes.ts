@@ -11,7 +11,7 @@ import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-requisicoes',
-  imports: [NovaRequisicao, AsyncPipe],
+  imports: [NovaRequisicao],
   templateUrl: './requisicoes.html',
   styleUrl: './requisicoes.css',
 })

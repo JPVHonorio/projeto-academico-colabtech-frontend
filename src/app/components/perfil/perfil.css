@@ -28,11 +28,16 @@ body {
 /* NAV TABS */
 .tabs {
   display: flex;
-  justify-content: center;
-  gap: 10px;
-  margin-bottom: 30px;
+  justify-content: space-between;
+  align-items: center;
   border-bottom: 1px solid #ddd;
   padding-bottom: 10px;
+  margin-bottom: 30px;
+}
+
+.tab-buttons {
+  display: flex;
+  gap: 10px;
 }
 
 .tab-button {
@@ -55,6 +60,23 @@ body {
   background: #0078ff15;
 }
 
+/* BOTÃO DE SAIR */
+.logout-button {
+  background: #ff4b5c;
+  color: #fff;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.logout-button:hover {
+  background: #e04350;
+  transform: scale(1.05);
+}
+
 /* SEÇÕES */
 .tab-content {
   display: none;
@@ -72,12 +94,17 @@ h1 {
 }
 
 @media (max-width: 600px) {
-  .form-grid {
-    grid-template-columns: 1fr;
+  .tabs {
+    flex-direction: column;
+    gap: 10px;
   }
 
-  .req-header {
-    flex-direction: column;
-    align-items: stretch;
+  .tab-buttons {
+    justify-content: center;
+  }
+
+  .logout-button {
+    align-self: center;
+    width: 100%;
   }
 }

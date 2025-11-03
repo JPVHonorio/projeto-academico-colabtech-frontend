@@ -3,6 +3,8 @@ import { CommonModule } from '@angular/common';
 import { Loading } from '../loading/loading';
 import { Informacoes } from './informacoes/informacoes';
 import { Requisicoes } from './requisicoes/requisicoes';
+import { AuthService } from '../../services/auth/auth-service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-perfil',
@@ -12,11 +14,18 @@ import { Requisicoes } from './requisicoes/requisicoes';
 })
 export class Perfil {
 
+  //Injeções
+  private authService = inject(AuthService);
+
   // Atributos
   abaPerfil: boolean = true;
   abaRequisicoes: boolean = false;
   abaPerfilStatus = 'active';
   abaRequisicoesStatus = '';
+
+  constructor(
+    private router: Router
+  ) { }
 
   MostrarPerfil() {
     this.abaPerfil = true;
@@ -30,5 +39,10 @@ export class Perfil {
     this.abaRequisicoes = true;
     this.abaPerfilStatus = '';
     this.abaRequisicoesStatus = 'active';
+  }
+
+  Sair() {
+    this.authService.removerUsuarioLogado();
+    this.router.navigate([''])
   }
 }

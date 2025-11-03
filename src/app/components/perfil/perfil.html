@@ -1,8 +1,12 @@
 <body>
   <div class="container">
     <nav class="tabs">
-      <button class="tab-button {{abaPerfilStatus}}" data-tab="perfil" (click)="MostrarPerfil()">👤 Perfil</button>
-      <button class="tab-button {{abaRequisicoesStatus}}" data-tab="requisicoes" (click)="MostrarRequisicoes()">📄 Requisições</button>
+      <div class="tab-buttons">
+        <button class="tab-button {{abaPerfilStatus}}" data-tab="perfil" (click)="MostrarPerfil()">👤 Perfil</button>
+        <button class="tab-button {{abaRequisicoesStatus}}" data-tab="requisicoes" (click)="MostrarRequisicoes()">📄 Requisições</button>
+      </div>
+
+      <button class="logout-button" (click)="Sair()">🚪 Sair</button>
     </nav>
 
     <!-- ABA PERFIL -->
