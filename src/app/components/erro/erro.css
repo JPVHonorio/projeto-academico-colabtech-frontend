@@ -1,0 +1,17 @@
+p {
+  color: #d32f2f; /* vermelho forte */
+  font-size: 0.875rem; /* texto pequeno (~14px) */
+  font-weight: 500;
+  margin: 4px 0;
+}
+
+p::before {
+  content: "⚠ "; /* ícone de alerta opcional */
+}
+
+p {
+  background-color: #fdecea; /* leve fundo rosado */
+  border: 1px solid #f5c2c0;
+  border-radius: 4px;
+  padding: 6px 10px;
+}
