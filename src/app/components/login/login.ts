@@ -9,6 +9,7 @@ import { Loading } from '../loading/loading';
 import { LoadingService } from '../../services/loading/loading';
 import { Erro } from '../erro/erro';
 import { ErroService } from '../../services/erro/erro';
+import { AuthService } from '../../services/auth/auth-service';
 
 @Component({
   selector: 'app-login',
@@ -22,6 +23,7 @@ export class Login {
   private usuarioService = inject(UsuarioService);
   private loadingService = inject(LoadingService);
   private erroService = inject(ErroService);
+  private authService = inject(AuthService);
 
   // Atributos
   email: string = '';
@@ -47,9 +49,10 @@ export class Login {
     }
 
     this.usuarioService.autorizarUsuario(dadosLogin).subscribe(
-      (response: any) => {
+      (response: Usuario) => {
         //Função
         this.loadingService.esconder();
+        this.authService.armazenarUsuarioLogado(response);
         this.router.navigate(['/perfil'])
       },
       (error: HttpErrorResponse) => {

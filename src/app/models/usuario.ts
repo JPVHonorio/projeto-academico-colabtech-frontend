@@ -6,6 +6,7 @@
  */
 
 export interface Usuario {
+    id: number;
     codigo: string;
     email: string;
     senha: string;
